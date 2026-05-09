@@ -1,0 +1,44 @@
+{
+  "name": "Rndstorm",
+  "short_name": "Rndstorm",
+  "description": "Random probability roller — test your luck",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#080e1c",
+  "theme_color": "#1d4ed8",
+  "lang": "en",
+  "categories": ["utilities", "games"],
+  "icons": [
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-maskable.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "1 in 2",
+      "url": "./?odds=2",
+      "description": "Flip a coin"
+    },
+    {
+      "name": "1 in 6",
+      "url": "./?odds=6",
+      "description": "Roll a die"
+    },
+    {
+      "name": "1 in 100",
+      "url": "./?odds=100",
+      "description": "1% chance"
+    }
+  ]
+}
