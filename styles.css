@@ -182,16 +182,20 @@ body {
 }
 
 .odds-pills {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 8px;
-  overflow-x: auto;
-  padding-bottom: 4px;
   scrollbar-width: none;
   -ms-overflow-style: none;
-  justify-content: center;
 }
 
 .odds-pills::-webkit-scrollbar { display: none; }
+
+.odds-pill[data-odds="custom"] {
+  grid-column: 1 / -1;
+  justify-self: center;
+  padding: 8px 24px;
+}
 
 .odds-pill {
   flex-shrink: 0;
@@ -493,11 +497,6 @@ body {
     padding: 18px 28px 14px;
   }
 
-  .odds-pills {
-    flex-wrap: wrap;
-    overflow-x: visible;
-  }
-
   .roll-row {
     padding: 4px 28px 20px;
   }
@@ -514,22 +513,12 @@ body {
 
 @media (max-width: 599px) {
   .odds-pills {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    overflow-x: visible;
     gap: 6px;
-    padding-bottom: 0;
   }
 
   .odds-pill {
     padding: 8px 4px;
     text-align: center;
-  }
-
-  .odds-pill[data-odds="custom"] {
-    grid-column: 1 / -1;
-    justify-self: center;
-    padding: 8px 24px;
   }
 }
 
