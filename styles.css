@@ -512,6 +512,27 @@ body {
   }
 }
 
+@media (max-width: 599px) {
+  .odds-pills {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    overflow-x: visible;
+    gap: 6px;
+    padding-bottom: 0;
+  }
+
+  .odds-pill {
+    padding: 8px 4px;
+    text-align: center;
+  }
+
+  .odds-pill[data-odds="custom"] {
+    grid-column: 1 / -1;
+    justify-self: center;
+    padding: 8px 24px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.001ms !important;
